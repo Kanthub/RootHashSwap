@@ -2,9 +2,6 @@
 pragma solidity ^0.8.20;
 
 interface IRootHashSwapPair {
-    event Approval(address indexed owner, address indexed spender, uint256 value);
-    event Transfer(address indexed from, address indexed to, uint256 value);
-
     function name() external pure returns (string memory);
 
     function symbol() external pure returns (string memory);
@@ -63,4 +60,7 @@ interface IRootHashSwapPair {
     function sync() external;
 
     function initialize(address, address) external;
+
+    event Approval(address indexed owner, address indexed spender, uint256 value);
+    event Transfer(address indexed from, address indexed to, uint256 value);
 }
